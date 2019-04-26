@@ -1,0 +1,3 @@
+#define XTAL_FREQ 11059200UL
+#define BTIMER_COUNT 8
+#define BT_EXT_CALLBACK 0

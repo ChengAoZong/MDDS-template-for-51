@@ -1,0 +1,111 @@
+C51 COMPILER V9.55   INCLUDES                                                              04/26/2019 20:34:16 PAGE 1   
+
+
+C51 COMPILER V9.55, COMPILATION OF MODULE INCLUDES
+OBJECT MODULE PLACED IN .\Objects\includes.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\..\MDDS\includes.c COMPACT OMF2 ROM(COMPACT) OPTIMIZE(8,SPEED) BROWSE
+                    - INCDIR(.\conf;..\..\MDDS\MDDS_51) DEBUG PRINT(.\Listings\includes.lst) TABS(2) OBJECT(.\Objects\includes.obj)
+
+line level    source
+
+   1          #include "includes.h"
+   2          //---------------------------math-------------------------------
+   3          #if BASE64_EN>0
+              #include "Math/base64.c"
+              #endif
+   6          #if SHA3_EN>0
+              #include "Math/sha3.c"
+              #endif
+   9          #if TIME_EN>0
+              #include "Math/time.c"
+              #endif
+  12          //---------------------------middleware-------------------------
+  13          #include "Middleware/Middleware.c"
+  14          #if ABUTTON_EN>0
+              #include "Middleware/AbstractButton.c"
+              #endif
+  17          #if GUI_EN>0
+              #include "Middleware/GUI.c"
+              #endif
+  20          //#if >0
+  21          //#include "Middleware/.c"
+  22          //#endif
+  23          #if 0
+              #include "Middleware/Stream.c"
+              #endif
+  26          #if APPE_EN>0
+              #include "Middleware/AppE.c"
+              #endif
+  29          //--------------------------diver------------------------------
+  30          #include "Driver/Driver.c"
+  31          #if DAC8411_EN>0
+              #include "Driver/DAC8411.c"
+              #endif
+  34          #if FONT_EN>0
+              #include "Driver/font0816.c"
+              #endif
+  37          #if G2PLATFORM>0
+              #include "Driver/G2Platform.c"
+              #endif
+  40          #if HT1621_EN>0
+              #include "Driver/HT1621.c"
+              #endif
+  43          #if LCD_EN>0
+              #include "Driver/LX_12864.c"
+              #endif
+  46          #if SegLCD_G2_EN>0
+              #include "Driver/SegLCD_G2.c"
+              #endif
+  49          #if SSPI_EN>0
+              #include "Driver/SSPI.c"
+              #endif
+  52          #if TCA6416A_EN>0
+              #include "Driver/TCA6416A.c"
+              #endif
+C51 COMPILER V9.55   INCLUDES                                                              04/26/2019 20:34:16 PAGE 2   
+
+  55          #if TFT_EN>0
+              #include "Driver/TFT.c"
+              #endif
+  58          //--------------------------SOCDriver-------------------------
+  59          #ifdef PLATFORM_STM32
+              #include "MDDS_STM32/Adapter.c"
+              #endif
+  62          #ifdef PLATFORM_MCS51
+  63          #include "MDDS_51/sys.c"
+  64          #include "MDDS_51/gpio.c"
+  65          #include "MDDS_51/Timer.c"
+  66          #include "MDDS_51/basic_timer.c"
+  67          #endif
+  68          
+  69          //--------------------------Application-----------------------
+  70          #if APP_MENU_EN>0
+              #include "Application/menu.c"
+              #endif
+  73          #if APP_LAUNCHER_EN>0
+              #include "Application/Launcher.c"
+              #endif
+  76          #if TIMESET_EN>0
+              #include "Application/TimeSet.c"
+              #endif
+  79          
+*** WARNING C291 IN LINE 77 OF ..\..\MDDS\includes.c: not every exit path returns a value
+*** WARNING C291 IN LINE 98 OF ..\..\MDDS\includes.c: not every exit path returns a value
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1279    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =     12      17
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =     96    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  2 WARNING(S),  0 ERROR(S)
